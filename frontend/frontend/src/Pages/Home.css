@@ -1,0 +1,109 @@
+.product_section {
+    padding: 50px 0;
+    
+  }
+  
+  .product_section .box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 16px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 355px; /* Fixed height for square aspect */
+    width: 350px; /* Increased width by 5px */
+    margin: 0 auto; /* Centers the product card */
+    
+  }
+  
+  .product_section .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .product_section .img-box {
+    width: 100%;
+    height: 70%; /* Set to a percentage of the box height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product_section .img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures images fit within the box */
+  }
+  
+  .product_section .detail-box {
+    flex-grow: 1; /* Ensures the box will grow and take the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  
+  .product_section .detail-box h5 {  /* Title ===============*/
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: rgb(3, 3, 3);
+  }
+  
+  .product_section .detail-box h6 {   /* price ==============*/
+    font-size: 16px;
+    color: rgb(3, 3, 3) !important;
+    font-weight: 500;
+  }
+  
+  .product_section .btn-box a {
+    text-decoration: none;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .product_section .btn-box a:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Grid layout for 3 products per row */
+  .product_section .row {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between product cards */
+  }
+  
+  .product_section .col-sm-6, .product_section .col-md-4, .product_section .col-lg-4 {
+    flex: 1 1 30%; /* Ensuring 3 products per row */
+  }
+  
+  @media (max-width: 1024px) {
+    .product_section .row {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product_section .row {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+  }
+
+ #koko{
+    padding-left: 130px;
+
+  }
+ /* Move content towards the top */
+.carousel-item .container {
+  position: relative;
+  padding-top: -160px; /* Moves the content upwards */
+}
+
+

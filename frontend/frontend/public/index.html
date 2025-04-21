@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <!-- Basic -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <link rel="shortcut icon" href="%PUBLIC_URL%/assets/images/logoreact.png" type="image/png" />
+      <title>Famms</title>
+    
+      <!-- Bootstrap core CSS (e-commerce) -->
+      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/bootstrap.css" />
+      <link href="%PUBLIC_URL%/assets/css/font-awesome.min.css" rel="stylesheet" />
+      <link href="%PUBLIC_URL%/assets/css/style.css" rel="stylesheet" />
+      <link href="%PUBLIC_URL%/assets/css/responsive.css" rel="stylesheet" />
+    
+      <!-- Admin CSS (conditionally loaded) -->
+      <link rel="stylesheet" href="%PUBLIC_URL%/assets2/css/kaiadmin.min.css" id="admin-css" disabled />
+      <link rel="stylesheet" href="%PUBLIC_URL%/assets2/css/plugins.min.css" id="admin-plugins-css" disabled />
+      <link rel="stylesheet" href="%PUBLIC_URL%/assets2/css/demo.css" id="admin-demo-css" disabled />
+    
+      <!-- Fonts and icons for admin (conditionally loaded) -->
+      <script src="%PUBLIC_URL%/assets2/js/plugin/webfont/webfont.min.js" id="admin-webfont" disabled></script>
+    </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+   <!-- jQuery (used for both e-commerce and admin) -->
+  <script src="%PUBLIC_URL%/assets2/js/jquery-3.4.1.min.js"></script>
+  <!-- Popper JS and Bootstrap JS -->
+  <script src="%PUBLIC_URL%/assets2/js/popper.min.js"></script>
+  <script src="%PUBLIC_URL%/assets2/js/bootstrap.js"></script>
+
+  <!-- Conditionally load admin JS -->
+  <script src="%PUBLIC_URL%/assets2/js/custom.js" id="admin-custom-js" disabled></script>
+  <script>
+    window.addEventListener('load', function () {
+  const path = window.location.pathname;
+
+  // Check if it's an admin route
+  if (path.includes('/admin')) {
+    // Enable Admin styles and scripts
+    document.getElementById('admin-css').disabled = false;
+    document.getElementById('admin-plugins-css').disabled = false;
+    document.getElementById('admin-demo-css').disabled = false;
+    document.getElementById('admin-webfont').disabled = false;
+    document.getElementById('admin-custom-js').disabled = false;
+  } else {
+    // Disable Admin styles and scripts for e-commerce pages
+    document.getElementById('admin-css').disabled = true;
+    document.getElementById('admin-plugins-css').disabled = true;
+    document.getElementById('admin-demo-css').disabled = true;
+    document.getElementById('admin-webfont').disabled = true;
+    document.getElementById('admin-custom-js').disabled = true;
+  }
+});
+
+  </script>
+  </body>
+</html>
