@@ -1,0 +1,15 @@
+<?php
+// db_connect.php - Database connection
+
+$host = 'localhost'; // Your database host (e.g., localhost)
+$dbname = 'phpproject'; // Your database name
+$username = 'root'; // Your database username
+$password = ''; // Your database password
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+?>
